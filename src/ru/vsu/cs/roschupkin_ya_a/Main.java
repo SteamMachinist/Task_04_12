@@ -18,7 +18,7 @@ public class Main
         int[] initialPreviousTerms = createInitialPreviousTerms(
                 numberOfSummarizedPreviousTerms, sequenceTerms);
 
-        int bottomBorder = readParameter("Bottom border for sequence term");
+        int bottomBorder = readParameter("bottom border for sequence term");
 
         calculateSequenceTermsUntilBiggerThanBottomBorder(bottomBorder, sequenceTerms, initialPreviousTerms);
 
@@ -27,12 +27,14 @@ public class Main
 
     static void printSequence(ArrayList<Integer> sequenceTerms, int bottomBorder)
     {
+        System.out.println();
+
         for (Integer sequenceTerm : sequenceTerms)
         {
             System.out.printf("%d ", sequenceTerm);
         }
 
-        System.out.printf("%nThe first sequence term bigger or equal to %d is %d",
+        System.out.printf("%n%nThe first sequence term bigger or equal to %d is %d",
                 bottomBorder, sequenceTerms.get(sequenceTerms.size() - 1));
     }
 
