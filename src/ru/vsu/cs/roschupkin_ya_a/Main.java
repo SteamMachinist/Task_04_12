@@ -39,7 +39,8 @@ public class Main
     }
 
 
-    static int[] createInitialPreviousTerms(int numberOfSummarizedPreviousTerms, ArrayList<Integer> sequenceTerms)
+    static int[] createInitialPreviousTerms(int numberOfSummarizedPreviousTerms,
+                                            ArrayList<Integer> sequenceTerms)
     {
         int[] previousTerms = new int[numberOfSummarizedPreviousTerms];
 
@@ -83,7 +84,8 @@ public class Main
     static void createNewPreviousTerms(int[] previousTerms, int newTerm)
     {
         if (previousTerms.length - 1 >= 0)
-            System.arraycopy(previousTerms, 1, previousTerms, 0, previousTerms.length - 1);
+            System.arraycopy(previousTerms, 1,
+                    previousTerms, 0, previousTerms.length - 1);
 
         previousTerms[previousTerms.length - 1] = newTerm;
     }
