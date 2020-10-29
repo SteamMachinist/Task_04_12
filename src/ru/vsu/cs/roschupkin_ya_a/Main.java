@@ -20,7 +20,8 @@ public class Main
 
         int bottomBorder = readParameter("bottom border for sequence term");
 
-        calculateSequenceTermsUntilBiggerThanBottomBorder(bottomBorder, sequenceTerms, initialPreviousTerms);
+        calculateSequenceTermsUntilBiggerThanBottomBorder(bottomBorder,
+                sequenceTerms, initialPreviousTerms);
 
         printSequence(sequenceTerms, bottomBorder);
     }
